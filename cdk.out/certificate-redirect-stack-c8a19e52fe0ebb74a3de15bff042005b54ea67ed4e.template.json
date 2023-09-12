@@ -1,0 +1,211 @@
+{
+ "Resources": {
+  "RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a365E7EA82": {
+   "Type": "AWS::CertificateManager::Certificate",
+   "Properties": {
+    "DomainName": "brennanmcmicking.net",
+    "DomainValidationOptions": [
+     {
+      "DomainName": "brennanmcmicking.net",
+      "HostedZoneId": "Z045204614CI9B8AAMLRQ"
+     },
+     {
+      "DomainName": "brennanmcmicking.net",
+      "HostedZoneId": "Z045204614CI9B8AAMLRQ"
+     }
+    ],
+    "SubjectAlternativeNames": [
+     "brennanmcmicking.net"
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3"
+     }
+    ],
+    "ValidationMethod": "DNS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3/Resource"
+   }
+  },
+  "RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a110299962EC83": {
+   "Type": "AWS::CertificateManager::Certificate",
+   "Properties": {
+    "DomainName": "brnn.ca",
+    "DomainValidationOptions": [
+     {
+      "DomainName": "brnn.ca",
+      "HostedZoneId": "Z03423443O6HCVVPFMSAH"
+     },
+     {
+      "DomainName": "brnn.ca",
+      "HostedZoneId": "Z03423443O6HCVVPFMSAH"
+     },
+     {
+      "DomainName": "www.brnn.ca",
+      "HostedZoneId": "Z03423443O6HCVVPFMSAH"
+     }
+    ],
+    "SubjectAlternativeNames": [
+     "brnn.ca",
+     "www.brnn.ca"
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029"
+     }
+    ],
+    "ValidationMethod": "DNS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSszDRM1BMLC/WTU7J1s3JTNKrDi5JTM7WAQrFJ6cWlWSmZSYnlqTmJuYlpqcW6VU7I8R0nNPykLi1IH5QanF+aVEykJOXn5Kql1WsX2ZooWdoBrQkqzgzU7eoNK8kMzdVLwhCAwDf53XpgAAAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/CDKMetadata/Default"
+   }
+  },
+  "ExportsWriteruswest209BD44F0A7CF058B": {
+   "Type": "Custom::CrossRegionExportWriter",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomCrossRegionExportWriterCustomResourceProviderHandlerD8786E8A",
+      "Arn"
+     ]
+    },
+    "WriterProps": {
+     "region": "us-west-2",
+     "exports": {
+      "/cdk/exports/AccountStack/certificateredirectstackc8a19e52fe0ebb74a3de15bff042005b54ea67ed4euseast1RefRedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a365E7EA823D224EF7": {
+       "Ref": "RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a365E7EA82"
+      },
+      "/cdk/exports/AccountStack/certificateredirectstackc8a19e52fe0ebb74a3de15bff042005b54ea67ed4euseast1RefRedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a110299962EC836B163D7D": {
+       "Ref": "RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a110299962EC83"
+      }
+     }
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/ExportsWriteruswest209BD44F0/Resource/Default"
+   }
+  },
+  "CustomCrossRegionExportWriterCustomResourceProviderRoleC951B1E1": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ],
+    "Policies": [
+     {
+      "PolicyName": "Inline",
+      "PolicyDocument": {
+       "Version": "2012-10-17",
+       "Statement": [
+        {
+         "Effect": "Allow",
+         "Resource": [
+          "arn:aws:ssm:us-west-2:446708209687:parameter/cdk/exports/*"
+         ],
+         "Action": [
+          "ssm:DeleteParameters",
+          "ssm:ListTagsForResource",
+          "ssm:GetParameters",
+          "ssm:PutParameter"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider/Role"
+   }
+  },
+  "CustomCrossRegionExportWriterCustomResourceProviderHandlerD8786E8A": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-446708209687-us-east-1",
+     "S3Key": "d03a1e3909f7dea25696e7cc8c98e4f045bfc5c0717679fad2ffa98fccadcf81.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "__entrypoint__.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomCrossRegionExportWriterCustomResourceProviderRoleC951B1E1",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs16.x"
+   },
+   "DependsOn": [
+    "CustomCrossRegionExportWriterCustomResourceProviderRoleC951B1E1"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.d03a1e3909f7dea25696e7cc8c98e4f045bfc5c0717679fad2ffa98fccadcf81",
+    "aws:asset:property": "Code"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

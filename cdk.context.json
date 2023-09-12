@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=446708209687:domainName=brennanmcmicking.net:region=us-west-2": {
+    "Id": "/hostedzone/Z045204614CI9B8AAMLRQ",
+    "Name": "brennanmcmicking.net."
+  },
+  "hosted-zone:account=446708209687:domainName=brnn.ca:region=us-west-2": {
+    "Id": "/hostedzone/Z03423443O6HCVVPFMSAH",
+    "Name": "brnn.ca."
+  }
+}

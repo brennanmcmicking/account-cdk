@@ -4,13 +4,13 @@
     "id": "App",
     "path": "",
     "children": {
-      "AccountStack": {
-        "id": "AccountStack",
-        "path": "AccountStack",
+      "StagelessAccountStack": {
+        "id": "StagelessAccountStack",
+        "path": "StagelessAccountStack",
         "children": {
           "FullHostedZone": {
             "id": "FullHostedZone",
-            "path": "AccountStack/FullHostedZone",
+            "path": "StagelessAccountStack/FullHostedZone",
             "constructInfo": {
               "fqn": "aws-cdk-lib.Resource",
               "version": "2.84.0"
@@ -18,7 +18,7 @@
           },
           "ShortHostedZone": {
             "id": "ShortHostedZone",
-            "path": "AccountStack/ShortHostedZone",
+            "path": "StagelessAccountStack/ShortHostedZone",
             "constructInfo": {
               "fqn": "aws-cdk-lib.Resource",
               "version": "2.84.0"
@@ -26,15 +26,15 @@
           },
           "MainSiteRedirects": {
             "id": "MainSiteRedirects",
-            "path": "AccountStack/MainSiteRedirects",
+            "path": "StagelessAccountStack/MainSiteRedirects",
             "children": {
               "RedirectBucket": {
                 "id": "RedirectBucket",
-                "path": "AccountStack/MainSiteRedirects/RedirectBucket",
+                "path": "StagelessAccountStack/MainSiteRedirects/RedirectBucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/MainSiteRedirects/RedirectBucket/Resource",
+                    "path": "StagelessAccountStack/MainSiteRedirects/RedirectBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
@@ -65,11 +65,11 @@
               },
               "RedirectDistribution": {
                 "id": "RedirectDistribution",
-                "path": "AccountStack/MainSiteRedirects/RedirectDistribution",
+                "path": "StagelessAccountStack/MainSiteRedirects/RedirectDistribution",
                 "children": {
                   "CFDistribution": {
                     "id": "CFDistribution",
-                    "path": "AccountStack/MainSiteRedirects/RedirectDistribution/CFDistribution",
+                    "path": "StagelessAccountStack/MainSiteRedirects/RedirectDistribution/CFDistribution",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
                       "aws:cdk:cloudformation:props": {
@@ -139,7 +139,7 @@
                             "acmCertificateArn": {
                               "Fn::GetAtt": [
                                 "ExportsReader8B249524",
-                                "/cdk/exports/AccountStack/certificateredirectstackc8a19e52fe0ebb74a3de15bff042005b54ea67ed4euseast1RefRedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a365E7EA823D224EF7"
+                                "/cdk/exports/StagelessAccountStack/certificateredirectstackc85aa74c028d229a955ce44a29cde4654088c53cd9useast1RefRedirectCertificatec8a178a4d49d86003702d4c8a55459500d5598036464980F9ADDC273F7"
                               ]
                             },
                             "sslSupportMethod": "sni-only"
@@ -160,11 +160,11 @@
               },
               "RedirectAliasRecord9f03ef": {
                 "id": "RedirectAliasRecord9f03ef",
-                "path": "AccountStack/MainSiteRedirects/RedirectAliasRecord9f03ef",
+                "path": "StagelessAccountStack/MainSiteRedirects/RedirectAliasRecord9f03ef",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/MainSiteRedirects/RedirectAliasRecord9f03ef/Resource",
+                    "path": "StagelessAccountStack/MainSiteRedirects/RedirectAliasRecord9f03ef/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -203,11 +203,11 @@
               },
               "RedirectAliasRecordSix9f03ef": {
                 "id": "RedirectAliasRecordSix9f03ef",
-                "path": "AccountStack/MainSiteRedirects/RedirectAliasRecordSix9f03ef",
+                "path": "StagelessAccountStack/MainSiteRedirects/RedirectAliasRecordSix9f03ef",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/MainSiteRedirects/RedirectAliasRecordSix9f03ef/Resource",
+                    "path": "StagelessAccountStack/MainSiteRedirects/RedirectAliasRecordSix9f03ef/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -252,7 +252,7 @@
           },
           "AWSCloudFrontPartitionHostedZoneIdMap": {
             "id": "AWSCloudFrontPartitionHostedZoneIdMap",
-            "path": "AccountStack/AWSCloudFrontPartitionHostedZoneIdMap",
+            "path": "StagelessAccountStack/AWSCloudFrontPartitionHostedZoneIdMap",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnMapping",
               "version": "2.84.0"
@@ -260,15 +260,15 @@
           },
           "ShortDomainRedirects": {
             "id": "ShortDomainRedirects",
-            "path": "AccountStack/ShortDomainRedirects",
+            "path": "StagelessAccountStack/ShortDomainRedirects",
             "children": {
               "RedirectBucket": {
                 "id": "RedirectBucket",
-                "path": "AccountStack/ShortDomainRedirects/RedirectBucket",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectBucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectBucket/Resource",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
@@ -299,11 +299,11 @@
               },
               "RedirectDistribution": {
                 "id": "RedirectDistribution",
-                "path": "AccountStack/ShortDomainRedirects/RedirectDistribution",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectDistribution",
                 "children": {
                   "CFDistribution": {
                     "id": "CFDistribution",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectDistribution/CFDistribution",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectDistribution/CFDistribution",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
                       "aws:cdk:cloudformation:props": {
@@ -374,7 +374,7 @@
                             "acmCertificateArn": {
                               "Fn::GetAtt": [
                                 "ExportsReader8B249524",
-                                "/cdk/exports/AccountStack/certificateredirectstackc8a19e52fe0ebb74a3de15bff042005b54ea67ed4euseast1RefRedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a110299962EC836B163D7D"
+                                "/cdk/exports/StagelessAccountStack/certificateredirectstackc85aa74c028d229a955ce44a29cde4654088c53cd9useast1RefRedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c667A0CD97C9237ED4"
                               ]
                             },
                             "sslSupportMethod": "sni-only"
@@ -395,11 +395,11 @@
               },
               "RedirectAliasRecord3ea298": {
                 "id": "RedirectAliasRecord3ea298",
-                "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecord3ea298",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecord3ea298",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecord3ea298/Resource",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecord3ea298/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -438,11 +438,11 @@
               },
               "RedirectAliasRecordSix3ea298": {
                 "id": "RedirectAliasRecordSix3ea298",
-                "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecordSix3ea298",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecordSix3ea298",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecordSix3ea298/Resource",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecordSix3ea298/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -481,11 +481,11 @@
               },
               "RedirectAliasRecord775591": {
                 "id": "RedirectAliasRecord775591",
-                "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecord775591",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecord775591",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecord775591/Resource",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecord775591/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -524,11 +524,11 @@
               },
               "RedirectAliasRecordSix775591": {
                 "id": "RedirectAliasRecordSix775591",
-                "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecordSix775591",
+                "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecordSix775591",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "AccountStack/ShortDomainRedirects/RedirectAliasRecordSix775591/Resource",
+                    "path": "StagelessAccountStack/ShortDomainRedirects/RedirectAliasRecordSix775591/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
                       "aws:cdk:cloudformation:props": {
@@ -573,11 +573,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "AccountStack/CDKMetadata",
+            "path": "StagelessAccountStack/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "AccountStack/CDKMetadata/Default",
+                "path": "StagelessAccountStack/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -591,15 +591,15 @@
           },
           "ExportsReader": {
             "id": "ExportsReader",
-            "path": "AccountStack/ExportsReader",
+            "path": "StagelessAccountStack/ExportsReader",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "AccountStack/ExportsReader/Resource",
+                "path": "StagelessAccountStack/ExportsReader/Resource",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "AccountStack/ExportsReader/Resource/Default",
+                    "path": "StagelessAccountStack/ExportsReader/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.84.0"
@@ -619,11 +619,11 @@
           },
           "Custom::CrossRegionExportReaderCustomResourceProvider": {
             "id": "Custom::CrossRegionExportReaderCustomResourceProvider",
-            "path": "AccountStack/Custom::CrossRegionExportReaderCustomResourceProvider",
+            "path": "StagelessAccountStack/Custom::CrossRegionExportReaderCustomResourceProvider",
             "children": {
               "Staging": {
                 "id": "Staging",
-                "path": "AccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Staging",
+                "path": "StagelessAccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
                   "version": "2.84.0"
@@ -631,7 +631,7 @@
               },
               "Role": {
                 "id": "Role",
-                "path": "AccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Role",
+                "path": "StagelessAccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -639,7 +639,7 @@
               },
               "Handler": {
                 "id": "Handler",
-                "path": "AccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Handler",
+                "path": "StagelessAccountStack/Custom::CrossRegionExportReaderCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -653,7 +653,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "AccountStack/BootstrapVersion",
+            "path": "StagelessAccountStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.84.0"
@@ -661,7 +661,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "AccountStack/CheckBootstrapVersion",
+            "path": "StagelessAccountStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.84.0"
@@ -673,17 +673,17 @@
           "version": "2.84.0"
         }
       },
-      "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e": {
-        "id": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e",
-        "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e",
+      "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9": {
+        "id": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9",
+        "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9",
         "children": {
-          "RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3": {
-            "id": "RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3",
+          "RedirectCertificatec8a178a4d49d86003702d4c8a55459500d55980364": {
+            "id": "RedirectCertificatec8a178a4d49d86003702d4c8a55459500d55980364",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec8a178a4d49d86003702d4c8a55459500d55980364",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3/Resource",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec8a178a4d49d86003702d4c8a55459500d55980364/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
                   "aws:cdk:cloudformation:props": {
@@ -704,7 +704,7 @@
                     "tags": [
                       {
                         "key": "Name",
-                        "value": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec85b618ed2b7bfac6de9f7007dd7ffd4960e8949a3"
+                        "value": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec8a178a4d49d86003702d4c8a55459500d55980364"
                       }
                     ],
                     "validationMethod": "DNS"
@@ -721,13 +721,13 @@
               "version": "2.84.0"
             }
           },
-          "RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029": {
-            "id": "RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029",
+          "RedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c6": {
+            "id": "RedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c6",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c6",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029/Resource",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c6/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CertificateManager::Certificate",
                   "aws:cdk:cloudformation:props": {
@@ -753,7 +753,7 @@
                     "tags": [
                       {
                         "key": "Name",
-                        "value": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/RedirectCertificatec8063bbdeecbb1f6df1d0dc4948c493991a8a11029"
+                        "value": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/RedirectCertificatec88d883f0172d0c6a0dfa893f4458dc7c10315a5c6"
                       }
                     ],
                     "validationMethod": "DNS"
@@ -772,11 +772,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/CDKMetadata",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/CDKMetadata/Default",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -790,15 +790,15 @@
           },
           "ExportsWriteruswest209BD44F0": {
             "id": "ExportsWriteruswest209BD44F0",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/ExportsWriteruswest209BD44F0",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/ExportsWriteruswest209BD44F0",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/ExportsWriteruswest209BD44F0/Resource",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/ExportsWriteruswest209BD44F0/Resource",
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/ExportsWriteruswest209BD44F0/Resource/Default",
+                    "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/ExportsWriteruswest209BD44F0/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.84.0"
@@ -818,11 +818,11 @@
           },
           "Custom::CrossRegionExportWriterCustomResourceProvider": {
             "id": "Custom::CrossRegionExportWriterCustomResourceProvider",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/Custom::CrossRegionExportWriterCustomResourceProvider",
             "children": {
               "Staging": {
                 "id": "Staging",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider/Staging",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/Custom::CrossRegionExportWriterCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
                   "version": "2.84.0"
@@ -830,7 +830,7 @@
               },
               "Role": {
                 "id": "Role",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider/Role",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/Custom::CrossRegionExportWriterCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -838,7 +838,7 @@
               },
               "Handler": {
                 "id": "Handler",
-                "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/Custom::CrossRegionExportWriterCustomResourceProvider/Handler",
+                "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/Custom::CrossRegionExportWriterCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.84.0"
@@ -852,7 +852,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/BootstrapVersion",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.84.0"
@@ -860,7 +860,888 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "certificate-redirect-stack-c8a19e52fe0ebb74a3de15bff042005b54ea67ed4e/CheckBootstrapVersion",
+            "path": "certificate-redirect-stack-c85aa74c028d229a955ce44a29cde4654088c53cd9/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.84.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.84.0"
+        }
+      },
+      "AccountStack-dev": {
+        "id": "AccountStack-dev",
+        "path": "AccountStack-dev",
+        "children": {
+          "Cert-dev": {
+            "id": "Cert-dev",
+            "path": "AccountStack-dev/Cert-dev",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.84.0"
+            }
+          },
+          "RestApi-dev": {
+            "id": "RestApi-dev",
+            "path": "AccountStack-dev/RestApi-dev",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AccountStack-dev/RestApi-dev/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "RestApi-dev"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnRestApi",
+                  "version": "2.84.0"
+                }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "AccountStack-dev/RestApi-dev/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-dev/RestApi-dev/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "RestApidev10536ADE"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDeployment",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Deployment",
+                  "version": "2.84.0"
+                }
+              },
+              "DeploymentStage.dev": {
+                "id": "DeploymentStage.dev",
+                "path": "AccountStack-dev/RestApi-dev/DeploymentStage.dev",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-dev/RestApi-dev/DeploymentStage.dev/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "RestApidev10536ADE"
+                        },
+                        "deploymentId": {
+                          "Ref": "RestApidevDeployment22A4DC37f3909a671f44f775e0b7f9abdac096c7"
+                        },
+                        "methodSettings": [
+                          {
+                            "httpMethod": "*",
+                            "resourcePath": "/*",
+                            "dataTraceEnabled": false,
+                            "throttlingBurstLimit": 10,
+                            "throttlingRateLimit": 10
+                          }
+                        ],
+                        "stageName": "dev"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnStage",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Stage",
+                  "version": "2.84.0"
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "AccountStack-dev/RestApi-dev/Endpoint",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.84.0"
+                }
+              },
+              "CustomDomain": {
+                "id": "CustomDomain",
+                "path": "AccountStack-dev/RestApi-dev/CustomDomain",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-dev/RestApi-dev/CustomDomain/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::DomainName",
+                      "aws:cdk:cloudformation:props": {
+                        "certificateArn": "arn:aws:acm:us-east-1:446708209687:certificate/954abdfb-b567-498e-af2b-02669ff4507a",
+                        "domainName": "devapi.brennanmcmicking.net",
+                        "endpointConfiguration": {
+                          "types": [
+                            "EDGE"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDomainName",
+                      "version": "2.84.0"
+                    }
+                  },
+                  "Map:v1=>AccountStackdevRestApidevDC4A6E5A": {
+                    "id": "Map:v1=>AccountStackdevRestApidevDC4A6E5A",
+                    "path": "AccountStack-dev/RestApi-dev/CustomDomain/Map:v1=>AccountStackdevRestApidevDC4A6E5A",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-dev/RestApi-dev/CustomDomain/Map:v1=>AccountStackdevRestApidevDC4A6E5A/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::BasePathMapping",
+                          "aws:cdk:cloudformation:props": {
+                            "domainName": {
+                              "Ref": "RestApidevCustomDomain38C46035"
+                            },
+                            "basePath": "v1",
+                            "restApiId": {
+                              "Ref": "RestApidev10536ADE"
+                            },
+                            "stage": {
+                              "Ref": "RestApidevDeploymentStagedev92B41010"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnBasePathMapping",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.BasePathMapping",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.DomainName",
+                  "version": "2.84.0"
+                }
+              },
+              "Default": {
+                "id": "Default",
+                "path": "AccountStack-dev/RestApi-dev/Default",
+                "children": {
+                  "mock": {
+                    "id": "mock",
+                    "path": "AccountStack-dev/RestApi-dev/Default/mock",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-dev/RestApi-dev/Default/mock/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "RestApidev10536ADE",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "mock",
+                            "restApiId": {
+                              "Ref": "RestApidev10536ADE"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.84.0"
+                        }
+                      },
+                      "GET": {
+                        "id": "GET",
+                        "path": "AccountStack-dev/RestApi-dev/Default/mock/GET",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AccountStack-dev/RestApi-dev/Default/mock/GET/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "GET",
+                                "resourceId": {
+                                  "Ref": "RestApidevmockA750D999"
+                                },
+                                "restApiId": {
+                                  "Ref": "RestApidev10536ADE"
+                                },
+                                "apiKeyRequired": true,
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "MOCK"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.CfnMethod",
+                              "version": "2.84.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.Method",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.84.0"
+                    }
+                  },
+                  "spotify": {
+                    "id": "spotify",
+                    "path": "AccountStack-dev/RestApi-dev/Default/spotify",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-dev/RestApi-dev/Default/spotify/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "RestApidev10536ADE",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "spotify",
+                            "restApiId": {
+                              "Ref": "RestApidev10536ADE"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.ResourceBase",
+                  "version": "2.84.0"
+                }
+              },
+              "ApiKey-dev": {
+                "id": "ApiKey-dev",
+                "path": "AccountStack-dev/RestApi-dev/ApiKey-dev",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-dev/RestApi-dev/ApiKey-dev/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::ApiKey",
+                      "aws:cdk:cloudformation:props": {
+                        "enabled": true,
+                        "stageKeys": [
+                          {
+                            "restApiId": {
+                              "Ref": "RestApidev10536ADE"
+                            },
+                            "stageName": {
+                              "Ref": "RestApidevDeploymentStagedev92B41010"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnApiKey",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.ApiKey",
+                  "version": "2.84.0"
+                }
+              },
+              "ApiUsagePlan-dev": {
+                "id": "ApiUsagePlan-dev",
+                "path": "AccountStack-dev/RestApi-dev/ApiUsagePlan-dev",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-dev/RestApi-dev/ApiUsagePlan-dev/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlan",
+                      "aws:cdk:cloudformation:props": {
+                        "apiStages": [
+                          {
+                            "apiId": {
+                              "Ref": "RestApidev10536ADE"
+                            },
+                            "stage": {
+                              "Ref": "RestApidevDeploymentStagedev92B41010"
+                            },
+                            "throttle": {}
+                          }
+                        ],
+                        "usagePlanName": "usage-plan"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlan",
+                      "version": "2.84.0"
+                    }
+                  },
+                  "UsagePlanKeyResource:AccountStackdevRestApidevApiKeydev0B86AECB": {
+                    "id": "UsagePlanKeyResource:AccountStackdevRestApidevApiKeydev0B86AECB",
+                    "path": "AccountStack-dev/RestApi-dev/ApiUsagePlan-dev/UsagePlanKeyResource:AccountStackdevRestApidevApiKeydev0B86AECB",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlanKey",
+                      "aws:cdk:cloudformation:props": {
+                        "keyId": {
+                          "Ref": "RestApidevApiKeydevBC2E09D9"
+                        },
+                        "keyType": "API_KEY",
+                        "usagePlanId": {
+                          "Ref": "RestApidevApiUsagePlandev7B6C2F47"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlanKey",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.UsagePlan",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.RestApi",
+              "version": "2.84.0"
+            }
+          },
+          "SpotifyResourcedev": {
+            "id": "SpotifyResourcedev",
+            "path": "AccountStack-dev/SpotifyResourcedev",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "HostedZone-dev": {
+            "id": "HostedZone-dev",
+            "path": "AccountStack-dev/HostedZone-dev",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.84.0"
+            }
+          },
+          "ARecord-dev": {
+            "id": "ARecord-dev",
+            "path": "AccountStack-dev/ARecord-dev",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AccountStack-dev/ARecord-dev/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "devapi.brennanmcmicking.net.",
+                    "type": "A",
+                    "aliasTarget": {
+                      "dnsName": {
+                        "Fn::GetAtt": [
+                          "RestApidevCustomDomain38C46035",
+                          "DistributionDomainName"
+                        ]
+                      },
+                      "hostedZoneId": {
+                        "Fn::GetAtt": [
+                          "RestApidevCustomDomain38C46035",
+                          "DistributionHostedZoneId"
+                        ]
+                      }
+                    },
+                    "hostedZoneId": "Z045204614CI9B8AAMLRQ"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_route53.CfnRecordSet",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_route53.ARecord",
+              "version": "2.84.0"
+            }
+          },
+          "ApiGatewayIddev": {
+            "id": "ApiGatewayIddev",
+            "path": "AccountStack-dev/ApiGatewayIddev",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "ApiGatewayRootIddev": {
+            "id": "ApiGatewayRootIddev",
+            "path": "AccountStack-dev/ApiGatewayRootIddev",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "AccountStack-dev/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "AccountStack-dev/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.2.70"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "AccountStack-dev/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.84.0"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "AccountStack-dev/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.84.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.84.0"
+        }
+      },
+      "AccountStack-prod": {
+        "id": "AccountStack-prod",
+        "path": "AccountStack-prod",
+        "children": {
+          "Cert-prod": {
+            "id": "Cert-prod",
+            "path": "AccountStack-prod/Cert-prod",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.84.0"
+            }
+          },
+          "RestApi-prod": {
+            "id": "RestApi-prod",
+            "path": "AccountStack-prod/RestApi-prod",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AccountStack-prod/RestApi-prod/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "RestApi-prod"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnRestApi",
+                  "version": "2.84.0"
+                }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "AccountStack-prod/RestApi-prod/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-prod/RestApi-prod/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "RestApiprodDB77B8C8"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDeployment",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Deployment",
+                  "version": "2.84.0"
+                }
+              },
+              "DeploymentStage.prod": {
+                "id": "DeploymentStage.prod",
+                "path": "AccountStack-prod/RestApi-prod/DeploymentStage.prod",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-prod/RestApi-prod/DeploymentStage.prod/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "RestApiprodDB77B8C8"
+                        },
+                        "deploymentId": {
+                          "Ref": "RestApiprodDeployment27B557BFf53212e8577f722a4ee236979f962f2c"
+                        },
+                        "methodSettings": [
+                          {
+                            "httpMethod": "*",
+                            "resourcePath": "/*",
+                            "dataTraceEnabled": false,
+                            "throttlingBurstLimit": 10,
+                            "throttlingRateLimit": 10
+                          }
+                        ],
+                        "stageName": "prod"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnStage",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Stage",
+                  "version": "2.84.0"
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "AccountStack-prod/RestApi-prod/Endpoint",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.84.0"
+                }
+              },
+              "CustomDomain": {
+                "id": "CustomDomain",
+                "path": "AccountStack-prod/RestApi-prod/CustomDomain",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AccountStack-prod/RestApi-prod/CustomDomain/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::DomainName",
+                      "aws:cdk:cloudformation:props": {
+                        "certificateArn": "arn:aws:acm:us-east-1:446708209687:certificate/954abdfb-b567-498e-af2b-02669ff4507a",
+                        "domainName": "api.brennanmcmicking.net",
+                        "endpointConfiguration": {
+                          "types": [
+                            "EDGE"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDomainName",
+                      "version": "2.84.0"
+                    }
+                  },
+                  "Map:v1=>AccountStackprodRestApiprodEB49E7FA": {
+                    "id": "Map:v1=>AccountStackprodRestApiprodEB49E7FA",
+                    "path": "AccountStack-prod/RestApi-prod/CustomDomain/Map:v1=>AccountStackprodRestApiprodEB49E7FA",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-prod/RestApi-prod/CustomDomain/Map:v1=>AccountStackprodRestApiprodEB49E7FA/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::BasePathMapping",
+                          "aws:cdk:cloudformation:props": {
+                            "domainName": {
+                              "Ref": "RestApiprodCustomDomain05721B29"
+                            },
+                            "basePath": "v1",
+                            "restApiId": {
+                              "Ref": "RestApiprodDB77B8C8"
+                            },
+                            "stage": {
+                              "Ref": "RestApiprodDeploymentStageprod9F24E694"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnBasePathMapping",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.BasePathMapping",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.DomainName",
+                  "version": "2.84.0"
+                }
+              },
+              "Default": {
+                "id": "Default",
+                "path": "AccountStack-prod/RestApi-prod/Default",
+                "children": {
+                  "mock": {
+                    "id": "mock",
+                    "path": "AccountStack-prod/RestApi-prod/Default/mock",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-prod/RestApi-prod/Default/mock/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "RestApiprodDB77B8C8",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "mock",
+                            "restApiId": {
+                              "Ref": "RestApiprodDB77B8C8"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.84.0"
+                        }
+                      },
+                      "GET": {
+                        "id": "GET",
+                        "path": "AccountStack-prod/RestApi-prod/Default/mock/GET",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "AccountStack-prod/RestApi-prod/Default/mock/GET/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "GET",
+                                "resourceId": {
+                                  "Ref": "RestApiprodmockD13A0465"
+                                },
+                                "restApiId": {
+                                  "Ref": "RestApiprodDB77B8C8"
+                                },
+                                "apiKeyRequired": false,
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "MOCK"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.CfnMethod",
+                              "version": "2.84.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.Method",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.84.0"
+                    }
+                  },
+                  "spotify": {
+                    "id": "spotify",
+                    "path": "AccountStack-prod/RestApi-prod/Default/spotify",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "AccountStack-prod/RestApi-prod/Default/spotify/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "RestApiprodDB77B8C8",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "spotify",
+                            "restApiId": {
+                              "Ref": "RestApiprodDB77B8C8"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.84.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.84.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.ResourceBase",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.RestApi",
+              "version": "2.84.0"
+            }
+          },
+          "SpotifyResourceprod": {
+            "id": "SpotifyResourceprod",
+            "path": "AccountStack-prod/SpotifyResourceprod",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "HostedZone-prod": {
+            "id": "HostedZone-prod",
+            "path": "AccountStack-prod/HostedZone-prod",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.84.0"
+            }
+          },
+          "ARecord-prod": {
+            "id": "ARecord-prod",
+            "path": "AccountStack-prod/ARecord-prod",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AccountStack-prod/ARecord-prod/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "api.brennanmcmicking.net.",
+                    "type": "A",
+                    "aliasTarget": {
+                      "dnsName": {
+                        "Fn::GetAtt": [
+                          "RestApiprodCustomDomain05721B29",
+                          "DistributionDomainName"
+                        ]
+                      },
+                      "hostedZoneId": {
+                        "Fn::GetAtt": [
+                          "RestApiprodCustomDomain05721B29",
+                          "DistributionHostedZoneId"
+                        ]
+                      }
+                    },
+                    "hostedZoneId": "Z045204614CI9B8AAMLRQ"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_route53.CfnRecordSet",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_route53.ARecord",
+              "version": "2.84.0"
+            }
+          },
+          "ApiGatewayIdprod": {
+            "id": "ApiGatewayIdprod",
+            "path": "AccountStack-prod/ApiGatewayIdprod",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "ApiGatewayRootIdprod": {
+            "id": "ApiGatewayRootIdprod",
+            "path": "AccountStack-prod/ApiGatewayRootIdprod",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.84.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "AccountStack-prod/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "AccountStack-prod/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.84.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.2.70"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "AccountStack-prod/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.84.0"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "AccountStack-prod/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.84.0"
